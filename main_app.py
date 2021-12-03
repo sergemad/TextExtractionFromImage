@@ -32,7 +32,7 @@ if submit:
         imageT = Image.fromarray(gray)
         # Extracting text from image
         custom_config = r'-l eng --oem 3 --psm 6'
-        text = pytesseract.image_to_string(imageT)
+        text = pytesseract.image_to_string(imageT, config= custom_config)
         #remove symbol 
         characters_to_remove = "!()@—*“>+-/,'|£#%$&^_~"
         new_string =text
